@@ -42,22 +42,22 @@ export default function Contact() {
   }
 
   return (
-  <section id="contact" className="py-20 bg-gray-50 scroll-mt-24">
+    <section id="contact" className="py-16 sm:py-20 bg-gray-50 scroll-mt-24">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-  <h2 className="text-4xl font-bold text-center mb-12 text-gray-800 animate-fade-in">{t.contact.title}</h2>
+        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 text-gray-800 animate-fade-in">{t.contact.title}</h2>
         <div className="text-center">
-          <p className="text-gray-600 mb-6">{t.contact.reserveLead}</p>
-          <div className="flex justify-center space-x-4 mb-8">
-            <a href={t.contact.airbnbUrl} target="_blank" rel="noopener noreferrer" className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+          <p className="text-gray-600 mb-5 sm:mb-6">{t.contact.reserveLead}</p>
+          <div className="flex justify-center space-x-3 sm:space-x-4 mb-6 sm:mb-8">
+            <a href={t.contact.airbnbUrl} target="_blank" rel="noopener noreferrer" className="bg-blue-600 text-white px-5 py-2.5 text-sm sm:text-base rounded-lg font-semibold hover:bg-blue-700 transition-colors">
               {t.contact.airbnb}
             </a>
-            <a href={t.contact.bookingUrl} target="_blank" rel="noopener noreferrer" className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
+            <a href={t.contact.bookingUrl} target="_blank" rel="noopener noreferrer" className="bg-green-600 text-white px-5 py-2.5 text-sm sm:text-base rounded-lg font-semibold hover:bg-green-700 transition-colors">
               {t.contact.booking}
             </a>
           </div>
-          <p className="text-lg text-gray-600">{t.contact.lead}</p>
+          <p className="text-base sm:text-lg text-gray-600">{t.contact.lead}</p>
         </div>
-        <div className="bg-white p-4 rounded-lg shadow-md mb-8 mt-6 animate-slide-up">
+        <div className="bg-white p-4 sm:p-5 rounded-lg shadow-md mb-6 sm:mb-8 mt-6 animate-slide-up">
           <div className="flex items-center gap-4">
             <div className="flex-1">
               <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
@@ -69,7 +69,7 @@ export default function Contact() {
                 )}
               </div>
               <p className="text-gray-600 text-sm mt-1">{t.contact.hostBio}</p>
-              <div className="flex flex-wrap gap-3 mt-2 text-xs text-gray-600">
+              <div className="flex flex-wrap gap-2 sm:gap-3 mt-2 text-xs text-gray-600">
                 {Array.isArray(t.contact.hostLanguages) && t.contact.hostLanguages.length > 0 && (
                   <span className="inline-flex items-center gap-1 bg-gray-100 px-2 py-1 rounded">🗣️ {t.contact.hostLanguages.join(', ')}</span>
                 )}
@@ -80,8 +80,8 @@ export default function Contact() {
             </div>
           </div>
         </div>
-        <form onSubmit={handleSubmit} className="bg-white p-8 rounded-lg shadow-md">
-          <div className="grid md:grid-cols-2 gap-6 mb-6">
+        <form onSubmit={handleSubmit} className="bg-white p-6 sm:p-8 rounded-lg shadow-md">
+          <div className="grid md:grid-cols-2 gap-4 sm:gap-6 mb-6">
             <input
               type="text"
               name="name"

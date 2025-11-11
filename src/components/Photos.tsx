@@ -12,7 +12,7 @@ export default function Photos() {
     'photos/682164893.jpg',
     'photos/682164896.jpg',
     'photos/682164897.jpg',
-    'photos/682164899.jpg',
+    'photos/682164903.jpg',
     'photos/682164902.jpg'
   ]
 
@@ -53,9 +53,9 @@ export default function Photos() {
   }, [isOpen, closeLightbox, showPrev, showNext])
 
   return (
-  <section id="photos" className="py-20 scroll-mt-24">
+    <section id="photos" className="py-16 sm:py-20 scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-  <h2 className="text-4xl font-bold text-center mb-12 text-gray-800 animate-fade-in">{t.photos.title}</h2>
+        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 text-gray-800 animate-fade-in">{t.photos.title}</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {(showAll ? photos : photos.slice(0, 6)).map((photo, index) => (
             <div
@@ -98,7 +98,7 @@ export default function Photos() {
             </div>
           ))}
         </div>
-        <div className="flex justify-center mt-8">
+  <div className="flex justify-center mt-6 sm:mt-8">
           {photos.length > 6 && (
             <button
               type="button"

@@ -1,5 +1,20 @@
 import type { Metadata, Viewport } from 'next'
+import { Playfair_Display, Poppins } from 'next/font/google'
 import './globals.css'
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-sans',
+  display: 'swap',
+})
+
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  weight: ['600', '700'],
+  variable: '--font-display',
+  display: 'swap',
+})
 
 const SITE_URL = 'https://przystanekokrezna.pl'
 
@@ -77,7 +92,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pl">
-      <body className="pb-[env(safe-area-inset-bottom)]">
+      <body className={`${poppins.variable} ${playfair.variable} pb-[env(safe-area-inset-bottom)]`}>
         {children}
       </body>
     </html>

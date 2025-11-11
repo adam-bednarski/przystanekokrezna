@@ -35,12 +35,12 @@ export default function Reviews() {
   const aggregateValue = aggregate?.value ?? null
 
   return (
-    <section id="insights" className="bg-gray-50 py-20 scroll-mt-24">
+    <section id="insights" className="bg-gray-50 py-16 sm:py-20 scroll-mt-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr),minmax(0,1.35fr)] lg:items-start lg:gap-x-14">
+        <div className="grid gap-10 sm:gap-12 lg:grid-cols-[minmax(0,1fr),minmax(0,1.35fr)] lg:items-start lg:gap-x-14">
           <div className="space-y-8">
             <div className="space-y-4">
-              <h2 className="text-4xl font-bold leading-tight text-gray-900">{t.faq.title}</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold leading-tight text-gray-900">{t.faq.title}</h2>
               <p className="max-w-lg text-sm text-gray-600 lg:text-base">{t.contact.lead}</p>
             </div>
             <FAQ variant="embedded" className="space-y-5" listClassName="space-y-4" showHeading={false} />
@@ -48,7 +48,7 @@ export default function Reviews() {
 
           <div className="space-y-8">
             <div className="space-y-6">
-              <h2 className="text-4xl font-bold leading-tight text-gray-900">{t.reviews.title}</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold leading-tight text-gray-900">{t.reviews.title}</h2>
               {aggregateValue && (
                 <div className="flex flex-col gap-3 rounded-3xl border border-blue-100 bg-white p-6 shadow-sm lg:flex-row lg:items-center lg:justify-between">
                   <div>

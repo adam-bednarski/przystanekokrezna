@@ -76,7 +76,6 @@ export type Dictionary = {
     showAll: string
     externalSummaryTitle: string
     aggregateLabel: string
-    aggregateFootnote: string
     updatedLabel: string
     reviewsCountLabel: string
     external: Array<{ source: string; rating: number; scale: number; reviews: number; url: string; updated: string }>
@@ -265,7 +264,6 @@ export const dictionaries: Record<Locale, Dictionary> = {
       showAll: 'Pokaż wszystkie recenzje',
       externalSummaryTitle: 'Oceny na portalach',
       aggregateLabel: 'Łączna średnia',
-      aggregateFootnote: 'Średnia ważona na podstawie liczby opinii – przeliczona na skalę 5-punktową.',
       updatedLabel: 'Aktualizacja',
       reviewsCountLabel: 'opinii',
       external: [
@@ -512,7 +510,6 @@ export const dictionaries: Record<Locale, Dictionary> = {
       showAll: 'Show all reviews',
       externalSummaryTitle: 'External ratings',
       aggregateLabel: 'Weighted average',
-      aggregateFootnote: 'Weighted average calculated across platforms and converted to a 5-point scale.',
       updatedLabel: 'Last updated',
       reviewsCountLabel: 'reviews',
       external: [
