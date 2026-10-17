@@ -4,12 +4,8 @@
 
 :root {
 	--brand-navy: #0f172a;
-	--brand-sky: #7dd3fc;
-	--brand-lilac: #e0e7ff;
-	--brand-peach: #fcd5ce;
-	--brand-cream: #fff7ed;
+	--brand-sky: #0284c7;
 	--brand-surface: #f8fafc;
-	--brand-gradient: linear-gradient(135deg, rgba(125, 211, 252, 0.35), rgba(252, 213, 206, 0.45) 55%, rgba(224, 231, 255, 0.4));
 	--ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -19,20 +15,14 @@ html {
 }
 
 body {
-	font-family: var(--font-sans, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif);
-	background: var(--brand-gradient);
-	color: #1f2937;
+	font-family: var(--font-sans, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+	background-color: #f8fafc;
+	color: #0f172a;
+	-webkit-font-smoothing: antialiased;
 }
 
-h1,
-h2,
-h3,
 .font-display {
 	font-family: var(--font-display, Georgia, serif);
-}
-
-section {
-	background-color: rgba(255, 255, 255, 0.72);
 }
 
 /* Respect users who prefer reduced motion */
@@ -42,41 +32,34 @@ section {
 	}
 }
 
-/* Reusable animations */
+/* Animations */
 @keyframes fade-in {
-	from { opacity: 0; transform: translateY(8px); }
+	from { opacity: 0; transform: translateY(6px); }
 	to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes slide-up {
-	from { opacity: 0; transform: translateY(16px); }
+	from { opacity: 0; transform: translateY(14px); }
 	to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes float {
-	0%, 100% { transform: translateY(0); }
-	50% { transform: translateY(-4px); }
 }
 
 .reveal {
 	opacity: 0;
-	transform: translateY(24px) scale(0.98);
-	transition: opacity 600ms var(--ease-spring), transform 650ms var(--ease-spring);
+	transform: translateY(20px);
+	transition: opacity 500ms var(--ease-spring), transform 500ms var(--ease-spring);
 }
 
 .reveal.reveal-visible {
 	opacity: 1;
-	transform: translateY(0) scale(1);
+	transform: translateY(0);
 }
 
-.animate-fade-in { animation: fade-in 600ms ease-out both; }
-.animate-slide-up { animation: slide-up 700ms ease-out both; }
-.animate-float { animation: float 2.2s ease-in-out infinite; }
+.animate-fade-in { animation: fade-in 500ms ease-out both; }
+.animate-slide-up { animation: slide-up 600ms ease-out both; }
 
 @media (prefers-reduced-motion: reduce) {
 	.animate-fade-in,
 	.animate-slide-up,
-	.animate-float,
 	.reveal {
 		animation: none;
 		opacity: 1;
@@ -96,6 +79,6 @@ section {
 	content: '';
 	position: absolute;
 	inset: 0;
-	background: rgba(15, 23, 42, 0.55);
+	background: linear-gradient(180deg, rgba(15, 23, 42, 0.78) 0%, rgba(15, 23, 42, 0.62) 50%, rgba(15, 23, 42, 0.85) 100%);
 	z-index: 0;
 }

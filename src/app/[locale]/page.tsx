@@ -1,22 +1,26 @@
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
+import PropertyHighlights from '@/components/PropertyHighlights'
 import About from '@/components/About'
 import Photos from '@/components/Photos'
-import Footer from '@/components/Footer'
 import Location from '@/components/Location'
 import Reviews from '@/components/Reviews'
 import Contact from '@/components/Contact'
+import Footer from '@/components/Footer'
 
 export default function HomeLocale() {
   return (
-    <div>
+    <div className="min-h-screen flex flex-col bg-slate-50 selection:bg-blue-100 selection:text-blue-900">
       <Header />
-      <Hero />
-      <Location />
-      <About />
-      <Photos />
-      <Contact />
-      <Reviews />
+      <main className="flex-1">
+        <Hero />
+        <PropertyHighlights />
+        <About />
+        <Photos />
+        <Location />
+        <Reviews />
+        <Contact />
+      </main>
       <Footer />
     </div>
   )
